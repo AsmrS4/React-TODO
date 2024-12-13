@@ -1,0 +1,64 @@
+@import './variables.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    font-family: 'Roboto', serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+main.todo {
+    width: 100%;
+    height: 100vh;
+    background: $bg-color;
+}
+
+.--is-hidden {
+    opacity: 0;
+}
+
+.todo__todo-container {
+    max-width: 992px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 24px;
+    background-color: inherit;
+    margin: 0 auto;
+
+    .todo-container__inner {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .todo-container__tittle {
+            font-size: 40px;
+            font-weight: 500;
+            align-self: flex-start;
+            padding-left: 32px;
+            color: $white-color;
+        }
+
+        .tasks-holder {
+            overflow: scroll;
+            flex: 1;
+            padding: 30px 10px;
+            display: flex;
+            flex-direction: column;
+            margin: 24px 0;
+        }
+
+        .btn {
+            align-self: flex-end;
+            width: 200px;
+        }
+    }
+}
